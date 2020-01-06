@@ -1,2 +1,2 @@
 # JS_learning
-Set of the hit for learning JavaScript
+Set of the hits for learning JavaScript
