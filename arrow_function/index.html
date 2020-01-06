@@ -27,6 +27,17 @@
                 // Do stuff
             };
         </pre>
+
+        <p>
+            Few points to note
+            <ul>
+                <li>You don’t need to use curly brackets if there’s only one statement in the function. In the cases where you omit the curly brackets, you can also omit the return keyword, as the return is implicit</li>
+                <li>this is bound lexically, meaning that fat arrow functions don’t have their own this and that this refers to the parent scope.</li>
+                <li>There’s no arguments variable available with arrow functions.</li>
+            
+                <li>You’ll probably want to use a transpiler like Babel to use arrow functions today, for browsers that don’t support them yet</li>
+            </ul>
+        </p>
     </p>
 
 
