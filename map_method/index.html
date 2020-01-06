@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map Function</title>
+</head>
+
+<body>
+    <p>
+        This iterates over an array and creates a new array that
+        has each item passed through a function. Also this way cooler than using
+        for loops on arrays <br>
+
+        Note: map() does not execute the function for array elements without values.
+        Note: this method does not change the original array
+    </p>
+    <p>
+        Syntax
+        <pre>
+            array.map()
+        </pre>
+    </p>
+
+    <script>
+        var drinks = ["wine", "soda", "whiskey"];
+
+        // Prepanding value in the above array
+        var coldDrinks = drinks.map(function (drink) {
+            return "ice " + drink;
+        });
+        console.log(coldDrinks);
+
+        // Another example, where there is an external function
+        var persons = [
+            { firstname: "John", lastname: "Doe" },
+            { firstname: "Gstar", lastname: "Stanley" },
+            { firstname: "Hamis", lastname: "Coder" }
+        ];
+        // function to get full name
+        function getFullName(item){
+            var fullname = [item.firstname, item.lastname].join(" ");
+            return fullname;
+        }
+
+        // outputing the data
+        var names = persons.map(getFullName);
+        console.log(names)
+
+
+
+    </script>
+</body>
+
+</html>
