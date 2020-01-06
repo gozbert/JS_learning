@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rest Parameters </title>
+</head>
+
+<body>
+    <article>
+        <h1>Rest Parameter in ES6/ES2015</h1>
+        <p>
+            This is the new way to work with function that have an arbitrary amount of arguments passed in
+        </p>
+
+        <p>
+            Syntax
+            <pre>
+                function myFunc(...restParams) {
+                   //Codes
+                } 
+                // passing the data
+                myFunc('param1', 'param2', 'param3')
+            </pre>
+        </p>
+    </article>
+
+
+    <script>
+        function myFunc(...someArgs) {
+            for (let i = 0; i < someArgs.length; i++) {
+                console.log(`Argument ${i + 1}: ${someArgs[i]}`);
+            }
+        }
+        // Calling the function
+        myFunc('Home', 'Juma', 'Ally')
+
+    </script>
+</body>
+
+</html>
