@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOMParser to Parse HTML Trings</title>
+</head>
+<body>
+    <article>
+        <h1>DOMParser</h1>
+        <p>
+            Some Rest API return an HTML string for the content, which make it hard to deal with. 
+            Fortunately the DOMParser helps to parse html string into fully formed DOM
+        
+            <br>
+            DOMParser is still experimental, so its implementation is subject to change and support can be limited
+        </p>
+        <p>
+            First you instantiate a new DOMParser instance and pass it to your HTML string using <b>parseFromString()</b>
+            function.        
+        </p>
+    </article>
+
+
+    <script>
+        //Create instance of DOMParser
+        let parser = new DOMParser();
+
+        // variable with HTML content
+        let htmlContent = '<p>Hello there this P tag with <b>Bold</b> tag </p>';
+        
+        // parsing the content which become the DOM Document
+        let parsedHtml = parser.parseFromString(htmlContent, 'text/html');
+       
+        // Interacting with dom Element
+        let pElements = parsedHtml.getElementsByTagName('p');
+        console.log(pElements[0].innerHTML)
+    </script>
+</body>
+</html>
