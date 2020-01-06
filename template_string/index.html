@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Literals</title>
+</head>
+<body>
+    <p>
+        The ECMAScript 2015 specification (ES6) brings us template literals for string interpolation and multiline strings.
+        The character used to define template literals is the backtick (`)
+    </p>
+
+    <p style="color: red;">
+        To see this example working open the developer tools of your browser
+    </p>
+
+    <script>
+        // Here's an example of string interpolation with template literals
+        function greeting(firstName, lastName) {
+            let message = `Hello ${firstName} ${lastName}`;
+            return message;
+        }
+        // Calling the function
+        console.log(greeting("Home", "World"));
+
+
+        // Multiline string
+        console.log(`This is the first line 
+        this is another line
+        this is third line `);
+
+        // another example of the power of string interpolation and multiline strings with template literals
+        var user = { name: "Joe", email: "joe@example.com" };
+        var item = { quantity: 12, price: 50.0 };
+
+        var message = `Name: ${user.name}
+        Email: ${user.email}
+        -----
+        Total price: ${item.quantity * item.price}`;
+        console.log(message);
+    </script>
+
+</body>
+</html>
