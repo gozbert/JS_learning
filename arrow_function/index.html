@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <p>
+        New with JavaScript since ES6 / ES2015,arrow functions,
+        also known as fat arrow functions, are a concise way to
+        write function expressions.
+    </p>
+
+    <p style="color: red;">
+        To see this example working open the developer tools of your browser
+    </p>
+
+    <p>
+        Syntax
+        <pre>
+            var func1 = ( parameters ) => {
+                // Do stuff
+            };
+        </pre>
+    </p>
+
+
+    <script>
+        // With Parameters
+        var func1 = (a, b) => {
+            return a * b;
+        }
+        // Printing result by calling the function and passing data to it
+        console.log("Function 1 " + func1(4,5));
+
+        // With only 1 param, here no need for parens
+        var func2 = a => {
+            return a * a;
+        }
+        console.log("Function 2 " + func2(3))
+
+
+        // No brackets and implicit return with single-line arrow function
+        var func3 = a => a * a;
+        console.log("Function 3 " + func3)
+
+        // Returning the object literal
+        var func4 = (first, last) => ({firstName: first, lastName:last});
+
+        console.log("Function 4 " + func4("Home", "Well").firstName)
+
+
+    </script>
+</body>
+
+</html>
